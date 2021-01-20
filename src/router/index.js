@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
 
 Vue.use(VueRouter)
 
@@ -14,8 +14,14 @@ const routes = [
   {
     path: '/login',
     name:'login',
-    meta: {layout: 'emty'},
+    meta: {layout: 'empty'},
     component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/register',
+    name:'register',
+    meta: {layout: 'empty'},
+    component: () => import('../views/Register.vue')
   },
   {
     path: '/categories',
@@ -24,10 +30,10 @@ const routes = [
     component: () => import('../views/Categories.vue')
   },
   {
-    path: '/detail-record',
-    name:'detail-record',
+    path: '/detail',
+    name:'detail',
     meta: {layout: 'main'},
-    component: () => import('../views/Detail-record.vue')
+    component: () => import('../views/Detail.vue')
   },
   {
     path: '/history',
@@ -52,12 +58,6 @@ const routes = [
     name:'record',
     meta: {layout: 'main'},
     component: () => import('../views/Record.vue')
-  },
-  {
-    path: '/register',
-    name:'register',
-    meta: {layout: 'main'},
-    component: () => import('../views/Register.vue')
   }
 ]
 
