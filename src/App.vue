@@ -12,7 +12,7 @@ import MainLayout from '@/layouts/MainLayout'
 export default {
   computed: {
     layout() {
-      return (this.$route.meta.layout || 'emty') + '-layout'
+      return (this.$route.meta.layout || 'empty') + '-layout'
     }
   },
   components: {
